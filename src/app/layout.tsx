@@ -5,8 +5,17 @@ import { METADATA } from '@/shared'
 import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
-  title: METADATA.title,
-  description: METADATA.description
+  title: {
+    default: METADATA.default,
+    template: METADATA.template
+  },
+  description: METADATA.description,
+  openGraph: {
+    title: METADATA.default,
+    description: METADATA.description,
+    url: METADATA.openGraph.url,
+    siteName: METADATA.openGraph.siteName
+  }
 }
 
 type LayoutProps = {
