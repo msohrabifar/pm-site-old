@@ -1,12 +1,13 @@
 import Link from 'next/link'
+import Heading from './Heading'
 
 export default function Navbar() {
   return (
     <nav>
-      <ul className="flex items-center gap-2 p-4 text-sm font-medium">
-        <li>
-          <Link href="/" className="py-2 px-3 hover:bg-zinc-100 rounded-lg">
-            Home
+      <ul className="flex items-center gap-4 p-4 text-sm font-medium">
+        <li className="flex items-center">
+          <Link href="/" className="py-2 pe-3">
+            <Heading>پایش من</Heading>
           </Link>
         </li>
         <li>
@@ -15,7 +16,7 @@ export default function Navbar() {
             prefetch={false}
             className="py-2 px-3 hover:bg-zinc-100 rounded-lg"
           >
-            Magazine
+            مجله
           </Link>
         </li>
       </ul>

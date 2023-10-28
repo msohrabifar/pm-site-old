@@ -7,5 +7,5 @@ interface Props {
 
 export default function Heading({ as = 'h1', children }: Props) {
   const HeadingTag = as
-  return <HeadingTag className="font-bold pb-3 text-3xl">{children}</HeadingTag>
+  return <HeadingTag className="font-bold pb-3 text-2xl">{children}</HeadingTag>
 }
