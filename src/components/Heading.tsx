@@ -5,7 +5,11 @@ interface Props {
   children: React.ReactNode
 }
 
-export default function Heading({ as = 'h1', children }: Props) {
+export default function Heading({ as = 'h1', children, ...props }: Props) {
   const HeadingTag = as
-  return <HeadingTag className="font-bold pb-3 text-2xl">{children}</HeadingTag>
+  return (
+    <HeadingTag {...props} className="font-bold pb-3 text-2xl">
+      {children}
+    </HeadingTag>
+  )
 }
