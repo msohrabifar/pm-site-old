@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 import { METADATA } from '@/shared'
 import { vazir } from '@/app/fonts'
 import { cn } from '@/lib/utils'
-import { ThemeProvider } from '@/components/theme-provider'
+// import { ThemeProvider } from '@/components/theme-provider'
 
-import Navbar from '@/components/Navbar'
+// import Navbar from '@/components/Navbar'
 import Container from '@/components/Container'
 
 export const metadata: Metadata = {
@@ -36,15 +36,15 @@ export default function RootLayout({ children }: LayoutProps) {
           enableSystem
           disableTransitionOnChange
         > */}
-          {/* <header>
+        {/* <header>
             <Container>
               <Navbar />
             </Container>
           </header> */}
-          <main className="grow flex flex-col p-8">
-            <Container>{children}</Container>
-          </main>
-          {/* <footer className="border-t p-8">
+        <main className="grow flex flex-col p-8">
+          <Container>{children}</Container>
+        </main>
+        {/* <footer className="border-t p-8">
             <Container>footer</Container>
           </footer> */}
         {/* </ThemeProvider> */}
