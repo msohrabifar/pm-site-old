@@ -17,7 +17,7 @@ export default function Therapist() {
         بیمار
       </p>
       <Link
-        href="/sdsadsa"
+        href="https://cdn.payeshman.com/lib/app/payeshman-therapist-1.0.0.apk"
         target="_blank"
         className="flex items-center gap-4 py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 transition-all mt-4"
       >
