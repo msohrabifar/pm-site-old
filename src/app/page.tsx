@@ -1,10 +1,21 @@
-import Heading from '@/components/Heading'
+import MainNavbar from '@/components/MainNavbar'
+import MainHero from '@/components/MainHero'
+import States from '@/components/States'
+import CTASection from '@/components/CTASection'
+import Faqs from '@/components/Faqs'
+import LatestPosts from '@/components/LatestPosts'
+import MagFooter from '@/components/MagFooter'
 
 export default function Home() {
   return (
     <>
-      <Heading>Home page</Heading>
-      <div>index page content</div>
+      <MainNavbar />
+      <MainHero />
+      <States />
+      <CTASection />
+      <Faqs />
+      <LatestPosts />
+      <MagFooter />
     </>
   )
 }
