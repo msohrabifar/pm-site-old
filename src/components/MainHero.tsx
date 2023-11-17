@@ -1,26 +1,22 @@
 import Link from 'next/link'
 import AndroidIcon from '@/components/icons/Android'
+import { BRAND_CAPTION, BRAND_DESCRIPTION } from '@/shared'
 
-const HERO_CAPTION = 'اپلیکیشن تخصصی آموزش خودمراقبتی به بیماران'
-const HERO_DESC = `اپلیکیشن پایش من با ارائه آموزش های علمی طبقه بندی شده، هدفمند و فرد
-            محور، به بیماران کمک می کند تا در دوران بهبودی بتوانند از خودشان
-            مراقبت کنند. بیماران و همراهان ایشان می توانند با استفاده از
-            اپلیکیشن پایش من تمام آموزش ها و نکات لازم را در زمینه مراقبت ها،
-            تغذیه، ورزش، فعالیت ها، مهارت ها و داروها متناسب با شرایط و وضعیت
-            بالینیشان دریافت نمایند.`
 
 export default function MainHero() {
   return (
     <section>
-      <div className="max-w-screen-xl mx-auto px-4 py-20 gap-12 text-gray-600 md:px-8 xl:flex">
+      <div className="max-w-screen-xl mx-auto px-4 pt-28 pb-12 gap-12 text-gray-600 md:px-8 xl:flex">
         <div className="space-y-5 max-w-2xl mx-auto text-center xl:text-right">
           {/* <h1 className="text-lg text-gray-800 font-extrabold mx-auto md:text-xl">
             پایش من – مراقب سلامتی من
           </h1> */}
           <h2 className="text-4xl text-gray-800 font-black mx-auto md:text-5xl !leading-snug !md:leading-[4rem]">
-            {HERO_CAPTION}
+            {BRAND_CAPTION}
           </h2>
-          <p className="max-w-xl mx-auto xl:mx-0 leading-7">{HERO_DESC}</p>
+          <p className="max-w-xl mx-auto xl:mx-0 leading-7">
+            {BRAND_DESCRIPTION}
+          </p>
           <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0 xl:justify-start">
             <Link
               href="https://cdn.payeshman.com/lib/app/payeshman-therapist-1.0.0.apk"

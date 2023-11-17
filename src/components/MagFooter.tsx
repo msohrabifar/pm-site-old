@@ -1,3 +1,5 @@
+import { BRAND_NAME, BRAND_DESCRIPTION } from '@/shared'
+
 export default function MagFooter() {
   const footerNavs = [
     {
@@ -49,9 +51,20 @@ export default function MagFooter() {
   ]
 
   return (
-    <footer className="pt-12 bg-gray-50">
+    <footer className="pt-12 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="py-12 space-y-6 items-start justify-between sm:flex md:space-y-0 gap-20">
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold">{BRAND_NAME.fa}</h2>
+            <p className="text-sm leading-7 text-gray-500 mt-4">
+              {BRAND_DESCRIPTION}
+            </p>
+          </div>
+          <div className="w-80">
+            <h3 className="text-base text-gray-800 font-semibold sm:pb-2">
+              لینک های دانلود اپلیکیشن
+            </h3>
+          </div>
           {footerNavs.map((item, idx) => (
             <ul className="space-y-1.5 text-gray-600" key={idx}>
               <h4 className="text-base text-gray-800 font-semibold sm:pb-2">
@@ -69,8 +82,8 @@ export default function MagFooter() {
               ))}
             </ul>
           ))}
-          <div className="flex-1"></div>
         </div>
+
         <div className="my-10 lg:-mx-8 py-6 px-8 bg-gray-100 rounded-full flex items-center justify-between ">
           <p className="text-xs text-gray-400 align-middle">
             © کلیه حقوق این سایت متعلق به پایش من میباشد.

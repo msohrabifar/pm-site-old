@@ -6,6 +6,8 @@ import Faqs from '@/components/Faqs'
 import LatestPosts from '@/components/LatestPosts'
 import MagFooter from '@/components/MagFooter'
 
+import { cn } from '@/lib/utils'
+
 const ctaSections = [
   {
     image: {
@@ -71,6 +73,14 @@ export default function Home() {
           label={ctaSection.label}
           caption={ctaSection.caption}
           description={ctaSection.description}
+          className={cn(
+            'py-16',
+            ctaSectionIndex === 0 ||
+              ctaSectionIndex === 2 ||
+              ctaSectionIndex === 4
+              ? 'bg-blue-50/80'
+              : ''
+          )}
         />
       ))}
       <Faqs />

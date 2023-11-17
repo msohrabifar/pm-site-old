@@ -19,10 +19,11 @@ export default function CTASection({
   imageAlign,
   label,
   caption,
-  description
+  description,
+  className
 }: Props) {
   return (
-    <section className="py-14">
+    <section className={className}>
       <div className="max-w-screen-xl mx-auto md:px-8">
         <div
           className={cn(
@@ -31,10 +32,10 @@ export default function CTASection({
           )}
         >
           <div className="sm:hidden lg:block">
-            <Image src={image.src} width={400} height={400} alt={image.alt} />
+            <Image src={image.src} width={460} height={460} alt={image.alt} />
           </div>
           <div className="flex-1 max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
-            <div className="text-blue-600">
+            <div className="inline-flex text-blue-600 bg-blue-100 p-4 rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="80"
