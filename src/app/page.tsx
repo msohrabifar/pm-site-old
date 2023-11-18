@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 const ctaSections = [
   {
     image: {
-      src: '/shot5.png',
+      src: '/cares-app.png',
       alt: 'services'
     },
     label: 'خدمات آموزشی',
@@ -50,7 +50,7 @@ const ctaSections = [
   },
   {
     image: {
-      src: '/shot5.png',
+      src: '/marked-app.png',
       alt: ''
     },
     label: '',
@@ -64,7 +64,7 @@ export default function Home() {
     <>
       <MainNavbar />
       <MainHero />
-      <States />
+      {/* <States /> */}
       {ctaSections.map((ctaSection, ctaSectionIndex) => (
         <CTASection
           key={ctaSectionIndex}
@@ -78,7 +78,7 @@ export default function Home() {
             ctaSectionIndex === 0 ||
               ctaSectionIndex === 2 ||
               ctaSectionIndex === 4
-              ? 'bg-blue-50/80'
+              ? 'bg-gray-50'
               : ''
           )}
         />

@@ -9,10 +9,10 @@ export default function MainNavbar() {
 
   // Replace javascript:void(0) paths with your paths
   const navigation = [
-    { title: 'راهنما', path: 'javascript:void(0)' },
-    { title: 'درباره ما', path: 'javascript:void(0)' },
-    { title: 'مجله سلامتی', path: 'javascript:void(0)' },
-    { title: 'فهرست منابع علمی', path: 'javascript:void(0)' }
+    { title: 'راهنما', path: '/' },
+    { title: 'درباره ما', path: '/' },
+    { title: 'مجله سلامتی', path: '/' },
+    { title: 'فهرست منابع علمی', path: '/' }
   ]
 
   useEffect(() => {
@@ -32,13 +32,14 @@ export default function MainNavbar() {
     >
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
         <div className="flex items-center justify-between py-5 md:block">
-          <a href="javascript:void(0)">
+          <a href="/" className="inline-flex items-center gap-3">
             <Image
               src="/logo.png"
               width={48}
               height={48}
               alt="Payeshman logo"
             />
+            <h1 className="text-2xl font-black">پایش من</h1>
           </a>
           <div className="md:hidden">
             <button
@@ -97,14 +98,14 @@ export default function MainNavbar() {
             })}
           </ul>
           <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <a
-              href="/"
+            {/* <a
+              href="https://cdn.payeshman.com/lib/app/payeshman-therapist-1.0.0.apk"
               className="block font-medium text-gray-700 hover:text-gray-900"
             >
               نسخه درمانگر
-            </a>
+            </a> */}
             <a
-              href="/"
+              href="https://cdn.payeshman.com/lib/app/payeshman-therapist-1.0.0.apk"
               className="flex items-center justify-center gap-x-1 py-2.5 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
             >
               دانلود اپلیکیشن

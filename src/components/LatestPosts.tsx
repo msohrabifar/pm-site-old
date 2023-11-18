@@ -1,36 +1,18 @@
 import Image from 'next/image'
+// types
+import type { Post } from '@/types/post'
 
-export default function LatestPosts() {
-  const posts = [
-    {
-      title: 'فیزیوتراپی بعد از عمل قلب باز – آشنایی با روش ها و مزایا',
-      desc: 'یک شخص ممکن است در طول زندگی خود در نواحی مختلفی از بدن نظیر قلب، کمر، زانو، دست، ران، لگن و مانند آن تحت جراحی های ارتوپدی قرار گیرد.',
-      img: '/blog1.jpg',
-      authorLogo: '/face.jpg',
-      authorName: 'شاهد رحیمی',
-      date: '5 شهریور 1402',
-      href: '/'
-    },
-    {
-      title: 'علت و درمان تنگی نفس بعد از عمل قلب باز',
-      desc: 'تنگی نفس یا نفس تنگی به طور کلی وضعیتی است که تنفس طبیعی برای شما مشکل می‌شود و این مشکل می‌تواند خفیف، حاد، جدی و یا مزمن باشد.',
-      img: '/blog4.jpg',
-      authorLogo: '/face.jpg',
-      authorName: 'حسن قربتی',
-      date: '5 شهریور 1402',
-      href: '/'
-    },
-    {
-      title:
-        'چرا بعد از عمل قلب باز سرفه می کنیم؟ روش تمیز نگهداشتن ریه با سرفه',
-      desc: 'سرفه نوعی واکنش دفاعی بدن نسبت به مواد محرک تنفسی (مانند پریدن تکه ی غذا در گلو) یا آلودگی هوا یا برای دفع ترشحات در هنگام بیماری است.',
-      img: '/blog3.jpg',
-      authorLogo: '/face.jpg',
-      authorName: 'هانیه سراوان',
-      date: '5 شهریور 1402',
-      href: '/'
-    }
-  ]
+async function getPosts(): Promise<{ result: Array<Post> }> {
+  const res = await fetch(
+    `http://ws.payeshman.com/api/site/v1/blog/get-posts/1`
+  )
+  return res.json()
+}
+
+export default async function LatestPosts() {
+  const { result } = await getPosts()
+  const posts = result.filter((post, postIndex) => postIndex <= 2)
+  // console.log(posts)
 
   return (
     <section className="pt-20 pb-40 px-4 md:px-8 bg-gray-50">
@@ -47,35 +29,35 @@ export default function LatestPosts() {
               className="max-w-md mx-auto mt-4 bg-white border border-gray-100 rounded-xl duration-300 hover:shadow-xl hover:shadow-gray-200"
               key={key}
             >
-              <a href={items.href}>
+              <a href="/">
                 <Image
-                  src={items.img}
+                  src="/blog1.jpg"
                   width={500}
                   height={100}
                   loading="lazy"
                   alt={items.title}
                   className="rounded-t-md"
                 />
-                <div className="flex items-center gap-2 mt-2 pt-3 px-3 mr-4 ml-2">
+                {/* <div className="flex items-center gap-2 mt-2 pt-3 px-3 mr-4 ml-2">
                   <div className="flex-none w-8 h-8 rounded-full">
                     <Image
                       src={items.authorLogo}
                       width={32}
                       height={32}
                       className="rounded-full"
-                      alt={items.authorName}
+                      alt={items.author.display_name}
                     />
                   </div>
                   <div className="mr-1">
                     <span className="block text-sm text-gray-900">
-                      {items.authorName}
+                      {items.author?.display_name}
                     </span>
                     <span className="block text-gray-400 text-xs">
-                      {items.date}
+                      {items.created_at}
                     </span>
                   </div>
-                </div>
-                <div className="py-3 px-3 mr-4 ml-2 mb-3">
+                </div> */}
+                <div className="pb-3 pt-6 px-3 mr-4 ml-2 mb-3">
                   <h3 className="text-lg font-medium text-gray-900 line-clamp-1">
                     {items.title}
                   </h3>

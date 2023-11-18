@@ -35,7 +35,7 @@ export default function CTASection({
             <Image src={image.src} width={460} height={460} alt={image.alt} />
           </div>
           <div className="flex-1 max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
-            <div className="inline-flex text-blue-600 bg-blue-100 p-4 rounded-xl">
+            <div className="inline-flex text-blue-600 bg-blue-100 p-4 rounded-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="80"

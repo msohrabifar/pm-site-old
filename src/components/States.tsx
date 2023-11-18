@@ -1,6 +1,7 @@
 export default function States() {
   const stats = [
     {
+      
       data: '35K',
       title: 'عملاء'
     },
@@ -30,10 +31,13 @@ export default function States() {
             النص من مولد النص العربى.
           </p>
         </div> */}
-        <div className="mt-12">
-          <ul className="flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap">
+        <div className="mt-8">
+          <ul className="flex flex-col items-center justify-center gap-x-8 gap-y-10 sm:flex-row sm:flex-wrap">
             {stats.map((item, idx) => (
-              <li key={idx} className="text-center px-12 md:px-16">
+              <li
+                key={idx}
+                className="text-center px-12 md:px-16 py-10 bg-gray-50 rounded-xl"
+              >
                 <h4 className="text-5xl text-blue-600 font-semibold">
                   {item.data}
                 </h4>

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import AndroidIcon from '@/components/icons/Android'
 import { BRAND_NAME, BRAND_DESCRIPTION } from '@/shared'
 
 export default function MagFooter() {
@@ -54,17 +56,6 @@ export default function MagFooter() {
     <footer className="pt-12 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="py-12 space-y-6 items-start justify-between sm:flex md:space-y-0 gap-20">
-          <div className="flex-1">
-            <h2 className="text-2xl font-semibold">{BRAND_NAME.fa}</h2>
-            <p className="text-sm leading-7 text-gray-500 mt-4">
-              {BRAND_DESCRIPTION}
-            </p>
-          </div>
-          <div className="w-80">
-            <h3 className="text-base text-gray-800 font-semibold sm:pb-2">
-              لینک های دانلود اپلیکیشن
-            </h3>
-          </div>
           {footerNavs.map((item, idx) => (
             <ul className="space-y-1.5 text-gray-600" key={idx}>
               <h4 className="text-base text-gray-800 font-semibold sm:pb-2">
@@ -82,33 +73,85 @@ export default function MagFooter() {
               ))}
             </ul>
           ))}
+          <div className="w-80">
+            <h3 className="text-base text-gray-800 font-semibold sm:pb-2">
+              لینک های دانلود اپلیکیشن
+            </h3>
+            <div className="flex flex-col gap-4">
+              <Link
+                href="https://cdn.payeshman.com/lib/app/payeshman-therapist-1.0.0.apk"
+                target="_blank"
+                className="flex items-center gap-2.5 py-2.5 px-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 transition-all mt-4"
+              >
+                <div>
+                  <AndroidIcon
+                    width={32}
+                    height={32}
+                    className="text-blue-50"
+                  />
+                </div>
+                <div className="flex flex-col justify-center items-start gap-0">
+                  <p className="text-base text-white font-medium">
+                    دانلود مستقیم
+                  </p>
+                  <p className="text-[0.66rem] text-white/60">فایل نصب APK</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold">{BRAND_NAME.fa}</h2>
+            <p className="text-sm leading-7 text-gray-700 mt-4">
+              تلفن پشتیبانی : 09029029400
+            </p>
+            <p className="text-sm leading-7 text-gray-700 mt-2">
+              آدرس :  مشهد،میدان فردوسی، میدان بوعلی، پارک علم و فناوری سلامت
+            </p>
+          </div>
         </div>
 
         <div className="my-10 lg:-mx-8 py-6 px-8 bg-gray-100 rounded-full flex items-center justify-between ">
           <p className="text-xs text-gray-400 align-middle">
-            © کلیه حقوق این سایت متعلق به پایش من میباشد.
+            © کلیه حقوق این سرویس ( وب‌سایت و اپلیکیشن‌های موبایل ) محفوظ و
+            متعلق به پایش من می‌باشد.
           </p>
           <div className="flex items-center gap-x-5 text-gray-400 ">
-            <a href="/">
+            <a href="/" rel="navigate to soroosh social media">
               <svg
                 className="w-5 h-5 hover:text-gray-500 duration-150"
                 fill="none"
-                viewBox="0 0 48 48"
+                viewBox="0 0 1045.000000 1045.000000"
               >
-                <g clip-path="url(#a)">
+                <g
+                  transform="translate(0.000000,1045.000000) scale(0.100000,-0.100000)"
+                  fill="currentColor"
+                  stroke="none"
+                >
                   <path
-                    fill="currentColor"
-                    d="M48 24C48 10.745 37.255 0 24 0S0 10.745 0 24c0 11.979 8.776 21.908 20.25 23.708v-16.77h-6.094V24h6.094v-5.288c0-6.014 3.583-9.337 9.065-9.337 2.625 0 5.372.469 5.372.469v5.906h-3.026c-2.981 0-3.911 1.85-3.911 3.75V24h6.656l-1.064 6.938H27.75v16.77C39.224 45.908 48 35.978 48 24z"
+                    d="M5075 10134 c-672 -34 -1274 -177 -1883 -448 -733 -327 -1405 -871
+-1903 -1538 -503 -674 -825 -1474 -929 -2308 -95 -755 -18 -1472 241 -2244
+189 -560 466 -1002 814 -1294 247 -208 479 -309 816 -357 361 -51 759 37 1074
+239 550 352 815 860 766 1467 -19 244 -68 432 -233 894 -246 688 -313 891
+-397 1196 -86 313 -151 642 -188 954 -22 189 -25 761 -5 925 62 501 206 958
+423 1340 89 157 156 246 289 384 396 410 910 632 1590 687 172 14 479 6 664
+-16 71 -8 131 -14 133 -12 13 13 -425 90 -635 111 -152 16 -502 27 -637 20z"
+                  />
+                  <path d="M6368 9993 c7 -3 16 -2 19 1 4 3 -2 6 -13 5 -11 0 -14 -3 -6 -6z" />
+                  <path
+                    d="M6806 9680 c-398 -63 -721 -325 -844 -685 -56 -164 -69 -395 -33
+-571 61 -296 213 -486 691 -861 314 -246 478 -392 730 -649 481 -490 728 -863
+923 -1391 252 -679 312 -1420 173 -2105 -73 -357 -217 -740 -401 -1063 -248
+-436 -630 -875 -938 -1079 -563 -372 -1276 -623 -1977 -698 -184 -19 -637 -16
+-825 6 -721 84 -1419 356 -2053 798 -110 77 -97 59 25 -34 372 -285 839 -540
+1312 -717 1159 -433 2360 -409 3512 72 155 65 394 181 517 251 35 20 69 36 76
+36 7 0 410 -106 895 -235 486 -130 885 -234 886 -233 1 2 -51 431 -116 953
+l-117 950 79 121 c630 976 896 2105 763 3249 -130 1130 -644 2165 -1474 2969
+-481 466 -982 788 -1388 892 -109 28 -313 40 -416 24z"
                   />
                 </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M0 0h48v48H0z" />
-                  </clipPath>
-                </defs>
               </svg>
             </a>
-            <a href="/">
+            <a href="/" rel="navigate to twitter social media">
               <svg
                 className="w-5 h-5 hover:text-gray-500 duration-150"
                 fill="none"
@@ -127,28 +170,19 @@ export default function MagFooter() {
                 </defs>
               </svg>
             </a>
-            <a href="/">
+            <a href="/" rel="navigate to telegram social media">
               <svg
                 className="w-5 h-5 hover:text-gray-500 duration-150"
-                fill="none"
-                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
               >
-                <g fill="currentColor" clip-path="url(#clip0_910_44)">
-                  <path
-                    fill-rule="evenodd"
-                    d="M24 1A24.086 24.086 0 008.454 6.693 23.834 23.834 0 00.319 21.044a23.754 23.754 0 003.153 16.172 23.98 23.98 0 0012.938 10.29c1.192.221 1.641-.518 1.641-1.146 0-.628-.024-2.45-.032-4.442-6.676 1.443-8.087-2.817-8.087-2.817-1.089-2.766-2.663-3.493-2.663-3.493-2.178-1.478.163-1.45.163-1.45 2.413.17 3.68 2.461 3.68 2.461 2.138 3.648 5.616 2.593 6.983 1.976.215-1.545.838-2.596 1.526-3.193-5.333-.6-10.937-2.647-10.937-11.791a9.213 9.213 0 012.472-6.406c-.246-.6-1.069-3.026.234-6.322 0 0 2.015-.64 6.602 2.446a22.904 22.904 0 0112.017 0c4.583-3.086 6.594-2.446 6.594-2.446 1.307 3.288.484 5.714.238 6.322a9.194 9.194 0 012.476 6.414c0 9.163-5.615 11.183-10.957 11.772.859.742 1.626 2.193 1.626 4.421 0 3.193-.028 5.762-.028 6.548 0 .636.433 1.38 1.65 1.146a23.98 23.98 0 0012.938-10.291 23.754 23.754 0 003.151-16.175A23.834 23.834 0 0039.56 6.69 24.086 24.086 0 0024.009 1H24z"
-                    clip-rule="evenodd"
-                  />
-                  <path d="M9.089 35.264c-.052.119-.243.154-.398.071-.155-.083-.27-.237-.214-.36.056-.122.242-.154.397-.07.155.082.274.24.215.359zM10.063 36.343a.4.4 0 01-.493-.11c-.155-.167-.187-.396-.068-.499.12-.102.334-.055.489.11.155.167.19.396.072.499zM11.008 37.714c-.147.103-.397 0-.536-.206a.395.395 0 010-.569c.147-.098.397 0 .537.202.139.202.143.47 0 .573zM12.292 39.042c-.131.146-.397.106-.616-.091-.219-.198-.27-.467-.139-.609.131-.142.397-.102.624.091.226.194.27.466.131.609zM14.092 39.816c-.06.186-.33.269-.6.19-.27-.08-.449-.3-.397-.49.051-.19.326-.277.6-.19.274.087.449.297.397.49zM16.056 39.95c0 .194-.223.36-.509.364-.286.004-.52-.154-.52-.348 0-.193.222-.36.508-.363.286-.004.52.15.52.347zM17.884 39.646c.036.194-.163.395-.45.443-.285.047-.536-.067-.572-.257-.035-.19.171-.395.45-.447.278-.05.536.068.572.261z" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_910_44">
-                    <path fill="#fff" d="M0 0h48v48H0z" />
-                  </clipPath>
-                </defs>
+                <path
+                  fill="currentColor"
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01c-.378.15-.577.298-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294c.26.006.549-.1.868-.32c2.179-1.471 3.304-2.214 3.374-2.23c.05-.012.12-.026.166.016c.047.041.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817c-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088c.327.216.589.393.85.571c.284.194.568.387.936.629c.093.06.183.125.27.187c.331.236.63.448.997.414c.214-.02.435-.22.547-.82c.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315a.337.337 0 0 0-.114-.217a.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
+                />
               </svg>
             </a>
-            <a href="/">
+            <a href="/" rel="navigate to instagram social media">
               <svg
                 className="w-5 h-5 hover:text-gray-500 duration-150"
                 fill="currentColor"

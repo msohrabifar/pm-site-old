@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@/components/theme-provider'
+// import { ThemeProvider } from '@/components/theme-provider'
 
 import Navbar from '@/components/Navbar'
 import Container from '@/components/Container'
@@ -11,12 +11,13 @@ type LayoutProps = {
 
 export default function MagLayout({ children }: LayoutProps) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
+    // <ThemeProvider
+    //   attribute="class"
+    //   defaultTheme="system"
+    //   enableSystem
+    //   disableTransitionOnChange
+    // >
+    <>
       <header>
         <Container>
           <Navbar />
@@ -27,6 +28,7 @@ export default function MagLayout({ children }: LayoutProps) {
       </main>
       <Faqs />
       <MagFooter />
-    </ThemeProvider>
+      {/* </ThemeProvider> */}
+    </>
   )
 }
